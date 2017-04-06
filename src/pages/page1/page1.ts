@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import {MediaCapture, Camera} from 'ionic-native';
+import { Platform } from 'ionic-angular';
+
 
 
 @Component({
@@ -12,6 +15,7 @@ import { NavController } from 'ionic-angular';
 export class Page1 implements OnInit {
 
   @ViewChild('myvideo') myVideo: any;
+    //myVideo == #my-video
 
   peer;
   anotherid;
@@ -22,6 +26,7 @@ export class Page1 implements OnInit {
 
   ngOnInit() {
     let video = this.myVideo.nativeElement;
+
     this.peer = new Peer({key: 'nek1yj0qrb43g14i'});
     setTimeout(() => {
       this.mypeerid = this.peer.id;
@@ -61,6 +66,10 @@ export class Page1 implements OnInit {
 
   videoconnect(){
     let video = this.myVideo.nativeElement;
+    var options = {
+      sourceType: 1
+    };
+
     var localvar = this.peer;
     var fname = this.anotherid;
 
@@ -79,7 +88,6 @@ export class Page1 implements OnInit {
     }, function(err){
       console.log('Failed to get stream', err);
     })
-
 
   }
 }
