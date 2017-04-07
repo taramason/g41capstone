@@ -34,8 +34,7 @@ export class Page1 implements OnInit {
 
     this.peer.on('connection', function(conn) {
       conn.on('data', function(data){
-      // Will print 'hi!'
-      console.log(data);
+      console.log(data);     // Will print 'hi!'
       });
     });
 
@@ -57,13 +56,17 @@ export class Page1 implements OnInit {
     })
   }
 
-  connect(){
-    var conn = this.peer.connect(this.anotherid);
-    conn.on('open', function(){
-      conn.send('Message from that id');
-    });
-  }
 
+
+  // connect(){ //Not used in final version
+  //   var conn = this.peer.connect(this.anotherid);  //connect to other persons id
+  //   conn.on('open', function(){
+  //     conn.send('Message from that id');
+  //   });
+  // }
+
+
+//event that fires when video connect button is hit
   videoconnect(){
     let video = this.myVideo.nativeElement;
     var options = {
@@ -80,7 +83,7 @@ export class Page1 implements OnInit {
     n.getUserMedia = ( n.getUserMedia || n.webkitGetUserMedia || n.mozGetUserMedia  || n.msGetUserMedia );
 
     n.getUserMedia({video: true, audio: true}, function(stream) {
-      var call = localvar.call(fname, stream);
+      var call = localvar.call(fname, stream);  //call other person using their fname (peerid)
       call.on('stream', function(remotestream) {
         video.src = URL.createObjectURL(remotestream);
         video.play();
@@ -88,6 +91,16 @@ export class Page1 implements OnInit {
     }, function(err){
       console.log('Failed to get stream', err);
     })
-
   }
+
+  videopause() {
+    let video = this.myVideo.nativeElement;
+
+    video.pause();
+  }
+
+  videostop() {
+    location.reload();
+  }
+
 }
