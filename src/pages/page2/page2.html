@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="startrecording()">Start</button>
-  <button ion-button (click)="selectvideo()">Select</button>
+  <button ion-button full (click)="startrecording()">Start</button>
   <video #myvideo height="300" width="300" controls></video>
+  <button ion-button full (click)="selectvideo()">Select</button>
 </ion-content>

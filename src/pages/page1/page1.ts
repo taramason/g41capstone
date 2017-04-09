@@ -76,8 +76,6 @@ export class Page1 implements OnInit {
     var localvar = this.peer;
     var fname = this.anotherid;
 
-    //var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-
     var n = <any>navigator;
 
     n.getUserMedia = ( n.getUserMedia || n.webkitGetUserMedia || n.mozGetUserMedia  || n.msGetUserMedia );
@@ -93,10 +91,34 @@ export class Page1 implements OnInit {
     })
   }
 
-  videopause() {
-    let video = this.myVideo.nativeElement;
+  // videopause() {
+  //   let video = this.myVideo.nativeElement;
+  //
+  //   video.pause();
+  // }
 
-    video.pause();
+  videopause(){
+    let video = this.myVideo.nativeElement;
+    var options = {
+      sourceType: 1
+    };
+
+    var localvar = this.peer;
+    var fname = this.anotherid;
+
+    var n = <any>navigator;
+
+    n.getUserMedia = ( n.getUserMedia || n.webkitGetUserMedia || n.mozGetUserMedia  || n.msGetUserMedia );
+
+    n.getUserMedia({video: true, audio: false}, function(stream) {
+      var call = localvar.call(fname, stream);  //call other person using their fname (peerid)
+      call.on('stream', function(remotestream) {
+        video.src = URL.createObjectURL(remotestream);
+        video.play();
+      })
+    }, function(err){
+      console.log('Failed to get stream', err);
+    })
   }
 
   videostop() {

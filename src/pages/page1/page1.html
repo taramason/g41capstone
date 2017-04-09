@@ -3,19 +3,28 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Perch</ion-title>
+    <ion-title color="primary">Perch</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Enter the ID of the monitor you would like to connect to below.</h3>
+  <!-- <h3>Enter the ID of the monitor you would like to connect to below.</h3> -->
+  <br>
+
+
 
   <!-- <p>
   </p> -->
 
-<h1>My id - {{mypeerid}}</h1>
+<h5 color="dark">My id number - {{mypeerid}}</h5>
+<ion-item>
+  <ion-label color="primary" stacked clearInput>Enter the ID of the monitor you would like to connect to.</ion-label>
+  <ion-input type="text" [(ngModel)]="anotherid" value="{{anotherid}}"></ion-input>
+</ion-item>
+<br>
 
-<input type="text" [(ngModel)]="anotherid">
+<!-- CONNECT TO PEER VIA VIDEO BUTTON -->
+<button ion-button full (click)="videoconnect()">Connect</button>
 
 
 <!-- OLD BUTTON FOR SENDING JUST DATA -->
@@ -28,13 +37,12 @@
 
 <br>
 
-<!-- CONNECT TO PEER VIA VIDEO BUTTON -->
-<button ion-button secondary (click)="videoconnect()">Video Chat</button>
+
 
 <!-- PAUSE STREAM -->
-<button ion-button secondary (click)="videopause()">Pause</button>
+<!-- <button ion-button secondary (click)="videopause()">Pause</button> -->
 
 <!-- STOP STREAM -->
-<button ion-button secondary (click)="videostop()">End Session</button>
+<button ion-button secondary full (click)="videostop()">End Session</button>
 
 </ion-content>
