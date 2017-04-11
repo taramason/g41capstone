@@ -3,22 +3,28 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title color="primary">Perch</ion-title>
+    <ion-title color="primary myTitle">Perch</ion-title>
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <!-- <h3>Enter the ID of the monitor you would like to connect to below.</h3> -->
+<ion-content padding class="content">
+
+  <div class="top">
+    <img class="owlIcon" src="img/owl-logo-02.svg" alt="">
+  </div>
+
   <br>
 
 
-
-  <!-- <p>
-  </p> -->
-
-<h5 color="dark">My id number - {{mypeerid}}</h5>
+  <!-- ACTUAL VIDEO STREAM BOX-->
+  <div class="videoDiv">
+    <video class="video" #myvideo height="260" width="300" controls></video>  <!-- @ViewChild('myvideo') myVideo: any; -->
+  </div>
+  <br>
+<p class="myid" color="dark">My id number - {{mypeerid}}</p>
 <ion-item>
-  <ion-label color="primary" stacked clearInput>Enter the ID of the monitor you would like to connect to.</ion-label>
+  <ion-label color="primary" stacked clearInput>Enter the ID you would like to connect to.</ion-label>
   <ion-input type="text" [(ngModel)]="anotherid" value="{{anotherid}}"></ion-input>
 </ion-item>
 <br>
@@ -31,12 +37,6 @@
 <!-- <button (click)="connect()">Connect</button> -->
 <br>
 <br>
-
-<!-- ACTUAL VIDEO STREAM BOX-->
-<video #myvideo height="300" width="300" controls></video>  <!-- @ViewChild('myvideo') myVideo: any; -->
-
-<br>
-
 
 
 <!-- PAUSE STREAM -->

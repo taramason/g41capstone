@@ -1,20 +1,42 @@
-// Ionic Variables and Theming. For more info, please see:
-// http://ionicframework.com/docs/v2/theming/
+// font-family: 'Pacifico', cursive;
+// font-family: 'Poppins', sans-serif;
+
 $font-path: "../assets/fonts";
 
 @import "ionic.globals";
+.body {
+  font-family: 'Poppins', sans-serif;
+}
+.scroll-content {
+}
+.toolbar-title {
+  font-family: 'Pacifico', cursive !important;
+  font-size: 3rem !important;
+  color: #f05033 !important;
+  font-weight: normal !important;
+}
+.myid {
+  padding-left: 14px;
+}
+.top {
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  justify-content: center;
+}
+.owlIcon {
+  height: 20vh;
+  align-self: center;
+}
+.videoDiv{
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+  border: 3px solid #f05033;
+  background-color: #e7efbc;
+}
+.video{
 
-
-
-// Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
-
-
-
+}
 
 // Named Color Variables
 // --------------------------------------------------

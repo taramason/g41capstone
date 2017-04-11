@@ -38,6 +38,7 @@ export class Page1 implements OnInit {
       });
     });
 
+
  var n = <any>navigator;
 
     n.getUserMedia =  ( n.getUserMedia || n.webkitGetUserMedia || n.mozGetUserMedia || n.msGetUserMedia );
@@ -54,6 +55,7 @@ export class Page1 implements OnInit {
         console.log('Failed to get stream', err);
       })
     })
+
   }
 
 
