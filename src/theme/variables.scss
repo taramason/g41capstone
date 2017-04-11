@@ -8,6 +8,10 @@ $font-path: "../assets/fonts";
   font-family: 'Poppins', sans-serif;
 }
 .scroll-content {
+  background-color: #e7efbc !important;
+}
+.toolbar-background {
+  background-color: #9fc2b7 !important;
 }
 .toolbar-title {
   font-family: 'Pacifico', cursive !important;
@@ -17,6 +21,9 @@ $font-path: "../assets/fonts";
 }
 .myid {
   padding-left: 14px;
+  margin-top: 0;
+  text-align: center;
+  color: #4f907b !important;
 }
 .top {
   font-family: 'Pacifico', cursive;
@@ -31,10 +38,18 @@ $font-path: "../assets/fonts";
   display: flex;
   justify-content: center;
   padding: 3%;
-  border: 3px solid #f05033;
+  border: 1px solid #f05033;
   background-color: #e7efbc;
 }
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+}
 .video{
+
+}
+.item-block {
+  background-color: #e7efbc !important;
 
 }
 

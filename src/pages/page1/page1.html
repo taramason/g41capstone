@@ -16,33 +16,28 @@
 
   <br>
 
+  <p class="myid" color="dark">My id - {{mypeerid}}</p>
 
   <!-- ACTUAL VIDEO STREAM BOX-->
   <div class="videoDiv">
     <video class="video" #myvideo height="260" width="300" controls></video>  <!-- @ViewChild('myvideo') myVideo: any; -->
   </div>
   <br>
-<p class="myid" color="dark">My id number - {{mypeerid}}</p>
+
+  <div class="buttonDiv">
+    <!-- CONNECT TO PEER VIA VIDEO BUTTON -->
+    <button ion-button round outline (click)="videoconnect()">Connect</button>
+
+
+    <!-- STOP STREAM -->
+    <button ion-button secondary round outline (click)="videostop()">End Session</button>
+  </div>
+  <br>
 <ion-item>
   <ion-label color="primary" stacked clearInput>Enter the ID you would like to connect to.</ion-label>
   <ion-input type="text" [(ngModel)]="anotherid" value="{{anotherid}}"></ion-input>
 </ion-item>
 <br>
 
-<!-- CONNECT TO PEER VIA VIDEO BUTTON -->
-<button ion-button full (click)="videoconnect()">Connect</button>
-
-
-<!-- OLD BUTTON FOR SENDING JUST DATA -->
-<!-- <button (click)="connect()">Connect</button> -->
-<br>
-<br>
-
-
-<!-- PAUSE STREAM -->
-<!-- <button ion-button secondary (click)="videopause()">Pause</button> -->
-
-<!-- STOP STREAM -->
-<button ion-button secondary full (click)="videostop()">End Session</button>
 
 </ion-content>
