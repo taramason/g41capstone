@@ -8,10 +8,21 @@ $font-path: "../assets/fonts";
   font-family: 'Poppins', sans-serif;
 }
 .scroll-content {
-  background-color: #e7efbc !important;
+  background-color: #e7efbc !important ;
+  padding-top: 8px !important;
+}
+.toolbar {
+  height: 50px !important;
+  border-top: 3px solid #e7efbc !important;
+  border-left: 3px solid #e7efbc !important;
+  border-right: 3px solid #e7efbc !important;
+  -webkit-box-shadow: 0px 6px 66px -16px rgba(0,0,0,0.75) !important;
+  -moz-box-shadow: 0px 6px 66px -16px rgba(0,0,0,0.75) !important;
+  box-shadow: 0px 6px 66px -16px rgba(0,0,0,0.75) !important;
 }
 .toolbar-background {
   background-color: #9fc2b7 !important;
+  border-bottom: none !important;
 }
 .toolbar-title {
   font-family: 'Pacifico', cursive !important;
@@ -31,26 +42,28 @@ $font-path: "../assets/fonts";
   justify-content: center;
 }
 .owlIcon {
-  height: 20vh;
+  height: 18vh;
   align-self: center;
 }
 .videoDiv{
   display: flex;
   justify-content: center;
   padding: 3%;
-  border: 1px solid #f05033;
+  border: .2px solid #f05033;
   background-color: #e7efbc;
 }
 .buttonDiv {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 .video{
 
 }
 .item-block {
   background-color: #e7efbc !important;
-
+}
+.label {
+  text-align: center;
 }
 
 // Named Color Variables
