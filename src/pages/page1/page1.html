@@ -4,26 +4,24 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title color="primary myTitle">Perch</ion-title>
-
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="content">
-
+<!-- OWL ICON -->
   <div class="top">
     <img class="owlIcon" src="img/owl-logo-02-01-01.svg" alt="">
   </div>
-
   <br>
-
   <p class="myid" color="dark">My ID - {{mypeerid}}</p>
 
   <!-- ACTUAL VIDEO STREAM BOX-->
   <div class="videoDiv">
-    <video class="video" #myvideo height="260" width="300" controls></video>  <!-- @ViewChild('myvideo') myVideo: any; -->
+    <video class="video" #myvideo height="300" width="600" controls></video>  <!-- @ViewChild('myvideo') myVideo: any; -->
   </div>
   <br>
 
+<!-- BUTTONS -->
   <div class="buttonDiv">
     <!-- CONNECT TO PEER VIA VIDEO BUTTON -->
     <button ion-button round outline (click)="videoconnect()">Connect</button>
@@ -33,6 +31,7 @@
     <button ion-button secondary round outline (click)="videostop()">End Session</button>
   </div>
   <br>
+
 <ion-item>
   <ion-label color="primary" stacked clearInput>Enter the ID you would like to connect to:</ion-label>
   <ion-input type="text" [(ngModel)]="anotherid" value="{{anotherid}}"></ion-input>
